@@ -1,3 +1,4 @@
+import csv
 def get_first_column(data):
     """
     Get the first column from a CSV file.
@@ -6,6 +7,11 @@ def get_first_column(data):
     Return:
         list: First column.
     """
-    return
-    
+    f=open('data.csv')
+    a=csv.reader(f)
+    l=[]
+    for i in a:
+        l.append(i)
+    return l[0]
+print(get_first_column('data.csv'))    
 # Read the csv file
